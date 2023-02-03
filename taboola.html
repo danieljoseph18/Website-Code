@@ -1,0 +1,35 @@
+<!-- Inside head tag -->
+<script type="text/javascript">
+  !function (e, f, u) {
+  e.async = 1;
+  e.src = u;
+  f.parentNode.insertBefore(e, f);
+  }(document.createElement('script'), document.getElementsByTagName('script')[0], '//cdn.taboola.com/libtrc/bscnews-bcsnews/loader.js');
+  </script>
+  
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- Inside Body -->
+
+<script type="text/javascript">
+
+  if (!window.page_counter) window.page_counter = 0;
+  window.page_counter++;
+  taboola_container_id = 'taboola-below-article-' + page_counter;
+  taboola_placement_id = 'Below Article Thumbnails ' + page_counter;
+
+  // Create DOM element to contain the widget using above id
+
+  var div = document.createElement('div');
+  div.setAttribute('id',taboola_container_id);
+  document.body.appendChild(div);
+
+</script>
+
+<script type="text/javascript">
+
+  window._taboola = window._taboola || [];
+  _taboola.push({mode:'alternating-thumbnails-b', container: taboola_container_id, placement: taboola_placement_id, target_type: 'mix'});
+  _taboola.push({article:'auto', url:'pass-canonical-url-here'});
+
+</script>
